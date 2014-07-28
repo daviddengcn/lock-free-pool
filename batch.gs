@@ -9,7 +9,7 @@ Threads := [...]int {
 }
 
 ElSizes := [...]int {
-  1, 10, 100, 1000, 10000,
+  1, 1000, 5000, 10000,
 }
 
 var results[len(Methods)][len(Threads)][len(ElSizes)]int

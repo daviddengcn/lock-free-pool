@@ -32,13 +32,14 @@ public class Benchmark {
       return;
     }
 
+    final int N = 1000000;
+
     // warm up JIT
-    for (int i = 0; i < 10000; i++) {
+    for (int i = 0; i < N; i++) {
       op.free(op.alloc());
     }
     Thread.sleep(1000);
-
-    final int N = 1000000;
+    System.gc();
 
     long start = System.currentTimeMillis();
 
